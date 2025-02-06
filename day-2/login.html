@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W3Schools Login & Register</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background-color: black;
+            height: 100vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+        }
+        .text-container {
+            width: 40%;
+            color: white;
+            font-size: 18px;
+            margin-left: 150px;
+        }
+        .text-container h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .text-container ul {
+            margin-top: 10px;
+            padding-left: 0;
+            list-style: none;
+        }
+        .text-container ul li {
+            margin: 5px 0;
+        }
+        .text-container img {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            width: 350px;
+            text-align: center;
+            position: absolute;
+            top: 50px;
+            right: 150px;
+        }
+        .form-container h2 {
+            margin-bottom: 20px;
+        }
+        .social-login {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .social-login button {
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+        }
+        .google { background: #db4437; }
+        .github { background: #333; }
+        .facebook { background: #4267B2; }
+        .feide { background: #ff9900; }
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background: #f3f5f4;
+            color: rgb(8, 8, 8);
+            border: 1px solid black;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        #formButton{
+            background-color: #04AA6D;
+            color: wheat;
+            border: none;
+        }
+        .form-container button:hover {
+            background: #88f8cf;
+           
+        }
+        .form-container a {
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #04AA6D;
+        }
+        .footer {
+
+width: 60%;
+text-align: left;
+background: black;
+color: white;
+padding: 10px 0;
+font-size: 12px;
+}
+    .footbox{
+        background-color: black;
+        padding-left: 150px;
+    }
+
+    .footer .social-container {
+        margin-bottom: 20px;
+    }
+
+    .footer .social-container a img {
+        width: 30px;
+        margin: 0 10px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .footer .social-container a img:hover {
+        transform: scale(1.2);
+    }
+
+    .footer .info-text {
+        margin: 10px 0;
+        opacity: 0.8;
+    }
+
+    .div img {
+        width: 150px;
+        margin-bottom: 20px;
+    }
+
+    .footbox img {
+        width: 120px;
+        margin-bottom: 20px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-container">
+            <a href="https://www.w3schools.com/" target="_blank">
+                <img src="https://images.sftcdn.net/images/t_app-icon-m/p/2390ff95-ae14-4820-a82d-37974607b9e4/3909688809/wiiwatch-2-logo" alt="W3Schools Logo">
+            </a>
+            <h1>Become a W3Schooler 💚</h1>
+            <p>Free to use, easy to love</p>
+            <ul>
+                <li>✅ Track your progress</li>
+                <li>✅ Set your goals</li>
+                <li>✅ Get a personalized learning path</li>
+                <li>✅ Test your skills</li>
+                <li>✅ Practice coding in browser</li>
+                <li>✅ Build and host a website</li>
+                <li>✅ Teacher Toolbox</li>
+            </ul>
+        </div>
+        <div class="form-container" id="formContainer">
+            <h2 id="formTitle">Login</h2>
+            <div class="social-login">
+                <button class="google">Google</button>
+                <button class="github">GitHub</button>
+                <button class="facebook">Facebook</button>
+                <button class="feide">Feide</button>
+            </div>
+            <input type="text" id="username" placeholder="Username or Email">
+            <input type="password" id="password" placeholder="Password">
+            <button id="formButton">Login</button>
+            <a href="#">Forgot password?</a>
+            <a href="#" id="toggleForm" class="toggle-btn">Create an account</a>
+        </div>
+    </div>
+    <div class="footbox">
+
+        <a href="https://www.w3schools.com/" target="_blank">
+            <img src="https://www.w3schools.com/aws/img_aws_w3_logo.png">
+        </a>
+        <div class="footer">
+            <div class="social-container">
+                <a href="https://www.facebook.com/w3schoolscom/"><img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/w3schools.com_official/"><img src="https://cdn-icons-png.flaticon.com/512/1409/1409946.png" alt="Instagram"></a>
+                <a href="https://www.youtube.com/@w3schools"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
+                <a href="https://www.linkedin.com/company/w3schools.com/"><img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn"></a>
+                <a href="https://discord.com/invite/6Z7UaRbUQM"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" alt="Discord"></a>
+            </div>
+            <p class="info-text">
+                W3Schools is optimized for learning and training. Examples might be simplified to improve reading and learning. 
+                Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. 
+                While using W3Schools, you agree to have read and accepted our terms of use, cookie, and privacy policy.
+            </p>
+            <p class="info-text">
+                Copyright 1999-2025 by Refsnes Data. All Rights Reserved. W3Schools is Powered by W3.CSS.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
