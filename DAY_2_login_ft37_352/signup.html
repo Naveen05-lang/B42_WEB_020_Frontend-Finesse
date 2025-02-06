@@ -26,11 +26,12 @@
         </div>
         <div class="signup-container">
             <h2>Sign Up</h2>
-            <input type="text" placeholder="First Name" required>
-            <input type="text" placeholder="Last Name" required>
-            <input type="email" placeholder="Email" required>
-            <input type="password" placeholder="Password" required>
-            <button>Sign Up</button>
+            <input type="text" id="signup-lName" placeholder="First Name" required>
+            <input type="text" id="signup-fName" placeholder="Last Name" required>
+            <input type="email" id="signup-email" placeholder="Email" required>
+            <input type="password" id="signup-password" placeholder="Password" required>
+            <input type="password" id="signup-confirm-password" placeholder="Confirm Password" required>
+            <button onclick="signUp()">Sign Up</button>
             <label class="">
                 By signing up, you agree to our
                 <a href="#">Terms of Service</a>
@@ -73,6 +74,6 @@
         </div>
     </div>
 
-
+<script src="../html/script/auth.js"></script>
 </body>
 </html>
