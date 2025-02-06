@@ -26,11 +26,13 @@
         </div>
         <div class="signup-container">
             <h2>Sign Up</h2>
-            <input type="text" placeholder="First Name" required>
-            <input type="text" placeholder="Last Name" required>
-            <input type="email" placeholder="Email" required>
-            <input type="password" placeholder="Password" required>
-            <button>Sign Up</button>
+            <input type="text" id="signup-fName" placeholder="First Name" required>
+            <input type="text" id="signup-lName" placeholder="Last Name" required>
+            <input type="email" id="signup-email" placeholder="Email" required>
+            <input type="password" id="signup-password" placeholder="Password" required>
+            <input type="password" id="signup-confirm-password" placeholder="Confirm Password" required>
+            
+            <button onclick="signUp()">Sign In</button>
             <label class="">
                 By signing up, you agree to our
                 <a href="#">Terms of Service</a>
@@ -42,7 +44,7 @@
                     Email me with news and updates.
                 </label>
             </label>
-        
+        <div id="msg-div"></div>
         </div>
         
     </div>
@@ -73,6 +75,6 @@
         </div>
     </div>
 
-
+<script src="script/auth.js"></script>
 </body>
 </html>
