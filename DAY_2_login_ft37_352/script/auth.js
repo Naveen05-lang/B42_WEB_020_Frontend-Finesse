@@ -71,7 +71,16 @@ async function authenticateUser(email, password) {
 // Register User (Signup)
 async function registerUser(user) {
     try {
-        console.log('in registretion');
+        // console.log('in registretion');
+
+        // Check if the user already exists
+        const checkRes = await fetch(fbURL + `?orderBy="email"&equalTo="${user.email}"`);
+        const existingUsers = await checkRes.json();
+
+        if (Object.keys(existingUsers).length > 0) {
+            showMessage("⚠️ User already exists with this email. You can log in.", "orange");
+            return;
+        }
         const res = await fetch(fbURL.replace(".json", "") + ".json", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
