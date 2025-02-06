@@ -176,11 +176,12 @@ font-size: 12px;
                 <button class="facebook">Facebook</button>
                 <button class="feide">Feide</button>
             </div>
-            <input type="text" id="username" placeholder="Username or Email">
-            <input type="password" id="password" placeholder="Password">
-            <button id="formButton">Login</button>
+            <input type="text" id="login-email" placeholder="Username or Email" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button onclick="logIn()">Login</button>
             <a href="#">Forgot password?</a>
             <a href="#" id="toggleForm" class="toggle-btn">Create an account</a>
+            <div id="msg-div"></div>
         </div>
     </div>
     <div class="footbox">
@@ -206,6 +207,6 @@ font-size: 12px;
             </p>
         </div>
     </div>
-
+<script src="../html/script/auth.js"></script>
 </body>
 </html>
