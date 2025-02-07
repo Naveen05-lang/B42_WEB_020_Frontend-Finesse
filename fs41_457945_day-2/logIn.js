@@ -1,14 +1,11 @@
-const fbURL = "https://w3datalog-default-rtdb.firebaseio.com/users.json";
+let fbURL = "https://b42-web-020-frontend-finesse-default-rtdb.firebaseio.com/users.json";
 
-// add div in html file to show msg <div id="msg-div"> </div>
-const msg = document.getElementById('msg-div');
+let msg = document.getElementById('msg-div');
 
-// Function to Show Messages
 function showMessage(message, color = "red") {
     msg.innerHTML = `<p style="color:${color};">${message}</p>`;
 }
 
-// Login Function
 function logIn() {
     const email = document.getElementById('login-email').value.trim();
     const password = document.getElementById('login-password').value.trim();
@@ -22,7 +19,6 @@ function logIn() {
 }
 
 
-// Authenticate User (Login)
 async function authenticateUser(email, password) {
     try {
         const res = await fetch(fbURL);
@@ -33,11 +29,9 @@ async function authenticateUser(email, password) {
         );
 
         if (user) {
-            showMessage(`✅ Login successful! Welcome, ${user.fName} ${user.lName}`, "green");
-            console.log("✅ User authenticated:", user);
+            window.location.href="../fs41_457945_day-3/homePage.html"
         } else {
-            showMessage("❌ Invalid email or password.");
-            console.warn("❌ Login failed: Incorrect credentials.");
+            alert("❌ Invalid email or password.");
         }
     } catch (error) {
         console.error("⚠️ Error:", error);
@@ -45,54 +39,6 @@ async function authenticateUser(email, password) {
     }
 }
 
-// // Signup Function
-// function signUp() {
-//     const fName = document.getElementById('signup-fName').value.trim();
-//     const lName = document.getElementById('signup-lName').value.trim();
-//     const email = document.getElementById('signup-email').value.trim();
-//     const password = document.getElementById('signup-password').value.trim();
-//     const confPass = document.getElementById('signup-confirm-password').value.trim();
 
-//     if (!fName || !lName || !email || !password || !confPass) {
-//         showMessage("⚠️ Please enter all fields.");
-//         return;
-//     }
-//     if (password.length < 6) {
-//         showMessage("⚠️ Password must be at least 6 characters.");
-//         return;
-//     }
-//     if (password !== confPass) {
-//         showMessage("⚠️ Password and Confirm Password should be some");
-//         return;
 
-//     }
 
-//     const newUser = { fName, lName, email, password };
-//     registerUser(newUser);
-// }
-// // Register User (Signup)
-// async function registerUser(user) {
-//     try {
-//         // console.log('in registretion');
-
-//         // Check if the user already exists
-//         const checkRes = await fetch(fbURL + `?orderBy="email"&equalTo="${user.email}"`);
-//         const existingUsers = await checkRes.json();
-
-//         if (Object.keys(existingUsers).length > 0) {
-//             showMessage("⚠️ User already exists with this email. You can log in.", "orange");
-//             return;
-//         }
-//         const res = await fetch(fbURL.replace(".json", "") + ".json", {
-//             method: "POST",
-//             headers: { "Content-Type": "application/json" },
-//             body: JSON.stringify(user)
-//         });
-//         const userID = await res.json();
-//         showMessage("✅ Account created successfully!", "green");
-//         console.log("New user registered:", userID.name);
-//     } catch (error) {
-//         console.error("⚠️ Error:", error);
-//         showMessage("⚠️ An error occurred during signup.");
-//     }
-// }
