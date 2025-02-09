@@ -314,6 +314,103 @@
         margin-left: 5px;
         cursor: pointer;
        }
+
+       
+#foot{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 16px;
+}
+
+.nav{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 140px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+}
+.nav a{
+    text-decoration: none;
+}
+.nav a:hover{
+    color: goldenrod;
+    text-decoration: underline;
+}
+.nav a img{
+    width: 60px;
+}
+.tab{
+    margin-left: 150px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th{
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+td{
+    font-size: 12px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+.footbox{
+background-color: black;
+padding-left: 150px;
+margin-top: 50px;
+font-size:12px;
+}
+
+.footer {
+
+    width: 60%;
+    text-align: left;
+    background: black;
+    color: white;
+    padding: 10px 0;
+    font-size: 12px;
+    }
+
+.footer .social-container {
+margin-bottom: 20px;
+}
+
+.footer .social-container a img {
+width: 30px;
+margin: 0 10px;
+transition: transform 0.3s ease-in-out;
+}
+
+.footer .social-container a img:hover {
+transform: scale(1.2);
+}
+
+.footer .info-text {
+margin: 10px 0;
+opacity: 0.8;
+font-size: 12px;
+}
+
+.div img {
+width: 150px;
+margin-bottom: 20px;
+}
+
+.footbox img {
+width: 120px;
+margin-bottom: 20px;
+}
        
     </style>
 </head>
@@ -465,7 +562,74 @@
         </div>
     </div>
 </div>
+<div id="foot">
+<footer>
+    <div class="nav">
+        <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI624ybMJMJGeL-Y_2WJFrIkMCMUHwvUYh_g&s" alt=""></a>
+        <a href="https://www.w3schools.com/plus/index.php">PLUS</a>
+        <a href="https://www.w3schools.com/spaces/index.php">SPACES</a>
+        <a href="https://campus.w3schools.com/en-in/collections/certifications">GET CERTIFIED</a>
+        <a href="https://www.w3schools.com/academy/index.php">FOR TEACHERS</a>
+        <a href="https://www.w3schools.com/academy/index.php">FOR BUSINESS</a>
+        <a href="">CONTACT US</a>
+    </div>
 
+    <div class="tab">
+        <table>
+            <thead>
+                <tr>
+                    <th>Top Tutorials</th>
+                    <th>Top References</th>
+                    <th>Top Examples</th>
+                    <th>Get Certified</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>HTML Tutorial</td>
+                    <td>HTML Reference</td>
+                    <td>HTML Examples</td>
+                    <td>HTML Certification</td>
+                </tr>
+                <tr>
+                    <td>CSS Tutorial</td>
+                    <td>CSS Reference</td>
+                    <td>CSS Examples</td>
+                    <td>CSS Certification</td>
+                </tr>
+                <tr>
+                    <td>JavaScript Tutorial</td>
+                    <td>JavaScript Reference</td>
+                    <td>JavaScript Examples</td>
+                    <td>JavaScript Certification</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <div class="footbox">
+
+        <div class="footer">
+            <div class="social-container">
+                <a href="https://www.facebook.com/w3schoolscom/"><img src="https://cdn-icons-png.flaticon.com/512/145/145802.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/w3schools.com_official/"><img src="https://cdn-icons-png.flaticon.com/512/1409/1409946.png" alt="Instagram"></a>
+                <a href="https://www.youtube.com/@w3schools"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
+                <a href="https://www.linkedin.com/company/w3schools.com/"><img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn"></a>
+                <a href="https://discord.com/invite/6Z7UaRbUQM"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" alt="Discord"></a>
+            </div>
+            <p class="info-text">
+                W3Schools is optimized for learning and training. Examples might be simplified to improve reading and learning. 
+                Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. 
+                While using W3Schools, you agree to have read and accepted our terms of use, cookie, and privacy policy.
+            </p>
+            <p class="info-text">
+                Copyright 1999-2025 by Refsnes Data. All Rights Reserved. W3Schools is Powered by W3.CSS.
+            </p>
+        </div>
+</footer>
+</div>
 </body>
 <script src="homePage.js"></script>
 </html>
