@@ -29,7 +29,7 @@ async function authenticateUser(email, password) {
         );
 
         if (user) {
-            window.location.href="../fs41_457945_day-3/homePage.html"
+            window.location.href="homePage.html"
         } else {
             alert("❌ Invalid email or password.");
         }
